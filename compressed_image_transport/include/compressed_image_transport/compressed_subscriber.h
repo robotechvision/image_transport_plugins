@@ -39,11 +39,11 @@
 
 #include <sensor_msgs/msg/image.hpp>
 #include <sensor_msgs/msg/compressed_image.hpp>
-#include <compressed_image_transport/simple_subscriber_plugin.hpp>
+#include <image_transport/simple_subscriber_plugin.hpp>
 
 namespace compressed_image_transport {
 
-class CompressedSubscriber final : public SimpleSubscriberPlugin<sensor_msgs::msg::CompressedImage>
+class CompressedSubscriber final : public image_transport::SimpleSubscriberPlugin<sensor_msgs::msg::CompressedImage>
 {
 public:
   CompressedSubscriber(): logger_(rclcpp::get_logger("CompressedSubscriber")) {}
